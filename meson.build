@@ -229,6 +229,10 @@ summary({
 }, section: 'GUI Toolkits')
 
 summary({
+  'Terminal Interface (notcurses)': get_variable('have_tui', false),
+}, section: 'Terminal Interface')
+
+summary({
   'Audio CD': get_variable('have_cdaudio', false),
   'Free Lossless Audio Codec': get_variable('have_flac', false),
   'Ogg Vorbis': get_variable('have_vorbis', false),

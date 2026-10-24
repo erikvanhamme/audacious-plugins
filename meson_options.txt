@@ -16,6 +16,8 @@ option('qtui', type: 'boolean', value: true,
        description: 'Whether the Qt interface is enabled')
 option('skins', type: 'boolean', value: true,
        description: 'Whether the Winamp interface is enabled')
+option('tui', type: 'boolean', value: true,
+       description: 'Whether the terminal interface (notcurses) is enabled')
 
 
 # playlist plugins

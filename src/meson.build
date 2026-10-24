@@ -261,6 +261,12 @@ if conf.has('USE_GTK')
 endif
 
 
+# terminal interface
+if get_option('tui') and not have_windows
+  subdir('tui')
+endif
+
+
 # general plugins
 if get_option('lirc')
   subdir('lirc')
