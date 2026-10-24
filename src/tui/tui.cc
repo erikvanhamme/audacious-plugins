@@ -1041,11 +1041,13 @@ bool TUI::init()
 {
     // Audacious already sets the locale and handles the quit signals.
     // SIGWINCH is watched from the main loop instead (see run()).
+    // The core of notcurses is enough: the interface draws no images or
+    // videos, so it does not need the multimedia part, which pulls in FFmpeg.
     notcurses_options opts = {};
     opts.flags = NCOPTION_INHIBIT_SETLOCALE | NCOPTION_NO_QUIT_SIGHANDLERS |
                  NCOPTION_NO_WINCH_SIGHANDLER | NCOPTION_SUPPRESS_BANNERS;
 
-    nc = notcurses_init(&opts, nullptr);
+    nc = notcurses_core_init(&opts, nullptr);
     if (!nc)
     {
         AUDERR("Failed to initialize notcurses.\n");

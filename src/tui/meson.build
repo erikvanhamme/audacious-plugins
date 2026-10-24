@@ -1,4 +1,4 @@
-notcurses_dep = dependency('notcurses', version: '>= 3.0', required: false)
+notcurses_dep = dependency('notcurses-core', version: '>= 3.0', required: false)
 have_tui = notcurses_dep.found()
 
 
